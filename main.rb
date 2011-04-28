@@ -1,0 +1,1 @@
+Dir["problems/*.rb"].each{|s| load s}
