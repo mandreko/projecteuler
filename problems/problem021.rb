@@ -10,7 +10,7 @@
 #Evaluate the sum of all the amicable numbers under 10000.
 
 require 'benchmark'
-require '../lib/divisors.rb'
+require File.expand_path(File.dirname(__FILE__)) + '/../lib/divisors.rb'
 
 def sumOfFactors(int)
   return 0 if int == 1

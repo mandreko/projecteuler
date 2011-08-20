@@ -106,7 +106,7 @@
 require 'benchmark'
 
 time = Benchmark.realtime do
-  File.open("../inputs/problem013.txt", "r") do |infile|
+  File.open(File.expand_path(File.dirname(__FILE__)) + "/../inputs/problem013.txt", "r") do |infile|
     #count = 0
     #while (line = infile.gets)
     #  count = count + line.to_i

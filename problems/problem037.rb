@@ -8,7 +8,7 @@
 # NOTE: 2, 3, 5, and 7 are not considered to be truncatable primes.
 require 'benchmark'
 require 'mathn'
-require '../lib/prime.rb'
+require File.expand_path(File.dirname(__FILE__)) + '/../lib/prime.rb'
 
 time = Benchmark.realtime do
   

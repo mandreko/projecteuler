@@ -7,7 +7,7 @@
 #How many circular primes are there below one million?
 
 require 'benchmark'
-require '../lib/prime'
+require File.expand_path(File.dirname(__FILE__)) + '/../lib/prime'
 
 time = Benchmark.realtime do
   @answer = 0

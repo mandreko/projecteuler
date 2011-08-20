@@ -15,7 +15,7 @@
 #Find the sum of all the positive integers which cannot be written as the sum of two abundant numbers.
 
 require 'benchmark'
-require '../lib/divisors.rb'
+require File.expand_path(File.dirname(__FILE__)) + '/../lib/divisors.rb'
 
 time = Benchmark.realtime do
 

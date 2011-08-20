@@ -8,7 +8,7 @@
 #Find the sum of the digits in the number 100!
 
 require 'benchmark'
-require '../lib/factorial.rb'
+require File.expand_path(File.dirname(__FILE__)) + '/../lib/factorial.rb'
 
 time = Benchmark.realtime do
   @answer = 100.factorial.to_s.split(//).inject(0) { |sum, n| sum + n.to_i}

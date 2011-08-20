@@ -7,7 +7,7 @@
 #Note: as 1! = 1 and 2! = 2 are not sums they are not included.
 
 require 'benchmark'
-require '../lib/factorial.rb'
+require File.expand_path(File.dirname(__FILE__)) + '/../lib/factorial.rb'
 
 time = Benchmark.realtime do
 

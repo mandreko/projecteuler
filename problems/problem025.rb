@@ -22,7 +22,7 @@
 #What is the first term in the Fibonacci sequence to contain 1000 digits?
 
 require 'benchmark'
-require '../lib/fibonacci.rb'
+require File.expand_path(File.dirname(__FILE__)) + '/../lib/fibonacci.rb'
 
 time = Benchmark.realtime do
 

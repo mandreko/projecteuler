@@ -14,7 +14,7 @@ require 'benchmark'
 time = Benchmark.realtime do
   @answer=0
 
-  f = File.open "../inputs/problem022.txt"
+  f = File.open File.expand_path(File.dirname(__FILE__)) + "/../inputs/problem022.txt"
   a = eval('[' + f.read + ']').sort
   f.close
 
