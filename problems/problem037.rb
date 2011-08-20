@@ -24,13 +24,11 @@ time = Benchmark.realtime do
     
     if prime.truncatable?
       truncatable_primes << prime
-      puts prime
     end
     
     if truncatable_primes.count == 11
       break
     end
-    
     
   end
   
