@@ -10,12 +10,10 @@ require 'mathn'
 time = Benchmark.realtime do
   count = 0
   Prime.each do |i|
+    break if count == 10001
     @answer = i
     count += 1
-    if count == 10001
-      break
-    end
   end
-  
+      #104743
 end
 puts "Euler 7: #{@answer}\t#{time*1000} milliseconds"
