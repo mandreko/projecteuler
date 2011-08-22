@@ -8,10 +8,14 @@ require 'benchmark'
 require 'mathn'
 
 time = Benchmark.realtime do
-  
-  primes = Prime.new
-  10_000.times { primes.next }
-  @answer = primes.next
+  count = 0
+  Prime.each do |i|
+    @answer = i
+    count += 1
+    if count == 10001
+      break
+    end
+  end
   
 end
 puts "Euler 7: #{@answer}\t#{time*1000} milliseconds"

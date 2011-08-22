@@ -28,7 +28,7 @@ def pythagorean_triple_from_sum(sum)
       return triple if triple && (triple.inject {|total, n| total + n }.to_i == sum)
     end
   end
-  return nil
+  nil
 end
     
 time = Benchmark.realtime do

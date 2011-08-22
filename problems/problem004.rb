@@ -14,9 +14,10 @@ def p4(m,n)
 end
 
 time = Benchmark.realtime do
-  @arr =[]
+  arr =[]
   999.downto(1) do |n|
-    @arr << p4(999,n)
+    arr << p4(999,n)
   end
+  @answer = arr.max
 end
-puts "Euler 4: #{@arr.max}\t#{time*1000} milliseconds"
+puts "Euler 4: #{@answer}\t#{time*1000} milliseconds"

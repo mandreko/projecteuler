@@ -6,13 +6,7 @@
 
 require 'benchmark'
 
-sum = 0
 time = Benchmark.realtime do
-    
-    1000.times { |i|
-      if i % 3 == 0 || i % 5 == 0
-        sum += i
-      end
-    }
+  @answer = 1000.times.select {|i| i % 3 == 0 || i % 5 == 0 }.inject(:+)
 end
-puts "Euler 1: #{sum}\t#{time*1000} milliseconds"
+puts "Euler 1: #{@answer}\t#{time*1000} milliseconds"

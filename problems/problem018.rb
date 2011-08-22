@@ -79,11 +79,11 @@ time = Benchmark.realtime do
       # to 15 starting at the first position. Continue to work up
       # the triangle until the maximum total emerges at the
       # triangle's apex.
-      @triangle [a-1][b] += [@triangle [a][b], @triangle [a][b+1]].max
+      @triangle[a-1][b] += [@triangle[a][b], @triangle[a][b+1]].max
       # puts triangle [a-1][b]
     }
   }
   
   #puts triangle [0][0]
 end
-puts "Euler 18: #{@triangle [0][0]}\t#{time*1000} milliseconds"
+puts "Euler 18: #{@triangle[0][0]}\t#{time*1000} milliseconds"
