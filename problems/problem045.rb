@@ -13,14 +13,15 @@ require 'benchmark'
 require File.expand_path(File.dirname(__FILE__)) + '/../lib/integer_shapes.rb'
 
 time = Benchmark.realtime do
-  triangles, pentagons, hexagons = [], [], []
+  #Only worry about pentagons and hexagons, since every triangle will also be a hexagon
+  pentagons, hexagons = [], []
   1.upto(100000) { |i|
-    triangles << i.triangular
+    #triangles << i.triangular
     pentagons << i.pentagonal
     hexagons << i.hexagonal
   }
 
   #The first is 1, the second is 40755, per the question. Return the next one since there could be more
-  @answer = (triangles & pentagons & hexagons)[2]
+  @answer = (pentagons & hexagons)[2]
 end
 puts "Euler 45: #{@answer}\t#{time*1000} milliseconds"
