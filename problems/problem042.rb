@@ -52,4 +52,4 @@ time = Benchmark.realtime do
   @answer = count
   
 end
-puts "Euler 41: #{@answer}\t#{time*1000} milliseconds"
+puts "Euler 42: #{@answer}\t#{time*1000} milliseconds"
