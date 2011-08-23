@@ -12,7 +12,7 @@
 # English words, how many are triangle words?
 
 require 'benchmark'
-require File.expand_path(File.dirname(__FILE__)) + '/../lib/triangle.rb'
+require File.expand_path(File.dirname(__FILE__)) + '/../lib/integer_shapes.rb'
 
 @letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
 
@@ -32,7 +32,7 @@ def triangle_word?(word)
     if (triangle_value == score)
       return true
     end
-    triangle_value = Triangle.triangle_digit(index)
+    triangle_value = index.triangular
     index = index + 1
   end
   false
@@ -42,8 +42,7 @@ time = Benchmark.realtime do
   count = 0
   File.open(File.expand_path(File.dirname(__FILE__)) + "/../inputs/problem042.txt", "r") do |infile|
     infile.lines(",").each do |i|
-      i.gsub!(/[\",]/, "")
-      puts i
+      i.gsub!(/[",]/, "")
       if triangle_word?(i)
         count = count + 1
       end
