@@ -12,10 +12,6 @@
 # HINT: Some products can be obtained in more than one way so be sure to only include it once in your sum.
 
 require 'benchmark'
-require 'mathn'
-require 'rational'
-require File.expand_path(File.dirname(__FILE__)) + '/../lib/divisors.rb'
-require File.expand_path(File.dirname(__FILE__)) + '/../lib/pandigital.rb'
 
 def test_two_and_three(n)
   n[0..1].join.to_i * n[2..4].join.to_i == n[5..9].join.to_i
